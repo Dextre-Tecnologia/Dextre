@@ -1,0 +1,80 @@
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.contact {
+  background: var(--clr-surface);
+  border-top: 1px solid var(--clr-border);
+}
+
+.contact-form {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--clr-silver);
+  letter-spacing: 0.02em;
+}
+
+.form-group input,
+.form-group textarea {
+  background: var(--clr-surface-2);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1rem;
+  color: var(--clr-text);
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  transition: border-color var(--duration) var(--ease),
+              box-shadow var(--duration) var(--ease);
+  resize: none;
+  outline: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--clr-silver-dim);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--clr-gold-dim);
+  box-shadow: 0 0 0 3px rgba(212,175,55,0.12);
+}
+
+.form-group input.is-invalid,
+.form-group textarea.is-invalid {
+  border-color: #e05555;
+}
+
+.form-error {
+  font-size: var(--fs-xs);
+  color: #e05555;
+  min-height: 1rem;
+}
+
+.form-success {
+  text-align: center;
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--clr-gold);
+  min-height: 1.5rem;
+}

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Dextre Tecnologia — Soluções tecnológicas inovadoras para impulsionar o seu negócio." />
+  <title>Dextre Tecnologia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&display=swap"
+    rel="stylesheet" />
+  <link rel="shortcut icon" href="./src/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/style-contact.css" />
+  <link rel="stylesheet" href="./css/style-about.css" />
+  <link rel="stylesheet" href="./css/style-services.css" />
+  <link rel="stylesheet" href="./css/style-main.css" />
+  <link rel="stylesheet" href="./css/style-navbar.css" />
+  <link rel="stylesheet" href="./css/style-hero.css" />
+  <link rel="stylesheet" href="./css/style-media-query.css" />
+  <link rel="stylesheet" href="./css/style-scroll-review.css" />
+  <link rel="stylesheet" href="./css/style-footer.css" />
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+
+      <script src="./js/script-navbar.js"></script>
+
+      <a href="#inicio" class=" nav-logo" id="nav-logo-link">
+        <img src="./src/Logo-Dextre-Tecnologia.png" width="100px" />
+        <span class="logo-text">Dextre<span class="logo-accent">.</span></span>
+      </a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#sobre" class="nav-link" id="link-sobre">Sobre</a></li>
+          <li><a href="#servicos" class="nav-link" id="link-servicos">Serviços</a></li>
+          <!-- ITEM DROPDOWN MODIFICADO -->
+          <li class="dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="link-produtos" aria-haspopup="true" aria-expanded="false">Produtos</a>
+            <ul class="dropdown-menu">
+              <li><a href="#agendex">AgenDex</a></li>
+              <li><a href="#maildex">MailDex</a></li>
+            </ul>
+          </li>
+        </ul>
+        <a href="#contato" class="btn-cta nav-cta" id="nav-cta-btn">Fale Conosco</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu" aria-expanded="false"
+        aria-controls="nav-links">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+
+    <!-- Mobile overlay -->
+    <div class="nav-overlay" id="nav-overlay"></div>
+  </header>
+
+
+  <!-- ===== HERO ===== -->
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-bg-grid"></div>
+      <div class="hero-glow hero-glow--1"></div>
+      <div class="hero-glow hero-glow--2"></div>
+
+      <div class="hero-content">
+        <p class="hero-eyebrow" id="hero-eyebrow">Tecnologia que transforma</p>
+        <h1 class="hero-title" id="hero-title">
+          Soluções Digitais<br />
+          <span class="gradient-text">para o Futuro</span>
+        </h1>
+        <p class="hero-subtitle" id="hero-subtitle">
+          Desenvolvemos sistemas, aplicativos e estratégias digitais
+          focadas em web, que impulsionam negócios.
+        </p>
+        <div class="hero-actions">
+          <a href="#servicos" class="btn-primary" id="hero-btn-primary">Conheça nossos serviços</a>
+          <a href="#sobre" class="btn-ghost" id="hero-btn-ghost">Saiba mais</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orbit-ring orbit-ring--outer"></div>
+        <div class="orbit-ring orbit-ring--inner"></div>
+        <div class="orbit-dot orbit-dot--1"></div>
+        <div class="orbit-dot orbit-dot--2"></div>
+        <div class="hero-logo-badge">
+          <img src="./src/Logo-Dextre-Tecnologia.png" alt="" class="badge-logo" />
+        </div>
+      </div>
+
+      <a href="#servicos" class="scroll-hint" id="scroll-hint" aria-label="Rolar para serviços">
+        <span class="scroll-hint__line"></span>
+      </a>
+    </section>
+
+    <!-- ===== SERVIÇOS ===== -->
+    <section class="services" id="servicos">
+      <div class="section-container">
+        <div class="section-header">
+          <p class="section-eyebrow">O que fazemos</p>
+          <h2 class="section-title">Nossos <span class="gradient-text">Serviços</span></h2>
+          <p class="section-desc">Entregamos tecnologia de ponta com foco em resultados reais para o seu negócio.</p>
+        </div>
+
+        <div class="cards-grid" id="services-grid">
+
+          <article class="card" id="card-dev">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3 class="card-title">Desenvolvimento Web</h3>
+            <p class="card-desc">Sites, sistemas e aplicações web modernas, rápidas e escaláveis, construídas com as
+              melhores tecnologias do mercado.</p>
+            <span class="card-tag">Web</span>
+          </article>
+
+          <article class="card" id="card-mobile">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+              </svg>
+            </div>
+            <h3 class="card-title">Apps Mobile</h3>
+            <p class="card-desc">Aplicativos nativos e híbridos para iOS e Android com experiências de usuário
+              excepcionais e alta performance.</p>
+            <span class="card-tag">Mobile</span>
+          </article>
+
+          <article class="card card--highlight" id="card-cloud">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="card-title">Automação & IA</h3>
+            <p class="card-desc">Automatize processos e ganhe inteligência operacional com soluções de IA personalizadas
+              para o seu segmento.</p>
+            <span class="card-tag">IA</span>
+          </article>
+
+          <article class="card" id="card-ui">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                </path>
+              </svg>
+            </div>
+            <h3 class="card-title">UI/UX Design</h3>
+            <p class="card-desc">Interfaces bonitas, intuitivas e centradas no usuário que convertem visitantes em
+              clientes fiéis.</p>
+            <span class="card-tag">Design</span>
+          </article>
+
+          <article class="card" id="card-infra">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="card-title">Infraestrutura Cloud</h3>
+            <p class="card-desc">Hospedagem, DevOps e arquitetura cloud com alta disponibilidade, segurança e custo
+              otimizado.</p>
+            <span class="card-tag">Cloud</span>
+          </article>
+
+          <article class="card" id="card-consult">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="card-title">Consultoria Tech</h3>
+            <p class="card-desc">Assessoria estratégica para escolhas tecnológicas que maximizam o ROI e impulsionam o
+              crescimento sustentável.</p>
+            <span class="card-tag">Estratégia</span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SOBRE ===== -->
+    <section class="about" id="sobre">
+      <div class="section-container about-inner">
+        <div class="about-visual" aria-hidden="true">
+          <div class="about-stats">
+            <div class="stat-card" id="stat-projects">
+              <span class="stat-number">120<span class="stat-plus">+</span></span>
+              <span class="stat-label">Projetos entregues</span>
+            </div>
+            <div class="stat-card" id="stat-clients">
+              <span class="stat-number">80<span class="stat-plus">+</span></span>
+              <span class="stat-label">Clientes satisfeitos</span>
+            </div>
+            <div class="stat-card" id="stat-years">
+              <span class="stat-number">7<span class="stat-plus">+</span></span>
+              <span class="stat-label">Anos de experiência</span>
+            </div>
+            <div class="stat-card" id="stat-team">
+              <span class="stat-number">15<span class="stat-plus">+</span></span>
+              <span class="stat-label">Especialistas no time</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <p class="section-eyebrow">Quem somos</p>
+          <h2 class="section-title">Tecnologia com <span class="gradient-text">propósito</span></h2>
+          <p class="about-text">
+            A Dextre Tecnologia nasceu da paixão por resolver problemas complexos com soluções elegantes.
+            Somos uma empresa brasileira que une expertise técnica e visão estratégica para entregar
+            produtos digitais que fazem diferença real.
+          </p>
+          <p class="about-text">
+            Nossa equipe multidisciplinar trabalha com metodologias ágeis, priorizando comunicação
+            transparente, qualidade de código e resultados mensuráveis.
+          </p>
+          <ul class="about-list" id="about-list">
+            <li>✦ Desenvolvimento orientado a resultados</li>
+            <li>✦ Código limpo e documentado</li>
+            <li>✦ Suporte pós-entrega dedicado</li>
+            <li>✦ Prazos e orçamentos respeitados</li>
+          </ul>
+          <a href="#contato" class="btn-primary" id="about-cta-btn">Entre em contato</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTATO ===== -->
+    <section class="contact" id="contato">
+      <div class="section-container">
+        <div class="section-header">
+          <p class="section-eyebrow">Vamos conversar</p>
+          <h2 class="section-title">Fale com a <span class="gradient-text">Dextre</span></h2>
+          <p class="section-desc">Pronto para transformar sua ideia em realidade? Nossa equipe está esperando por você.
+          </p>
+        </div>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="input-name">Nome completo</label>
+              <input type="text" id="input-name" name="name" placeholder="Seu nome" required autocomplete="name" />
+              <span class="form-error" id="error-name"></span>
+            </div>
+            <div class="form-group">
+              <label for="input-email">E-mail</label>
+              <input type="email" id="input-email" name="email" placeholder="seu@email.com" required
+                autocomplete="email" />
+              <span class="form-error" id="error-email"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="input-subject">Assunto</label>
+            <input type="text" id="input-subject" name="subject" placeholder="Como podemos ajudar?" />
+          </div>
+          <div class="form-group">
+            <label for="input-message">Mensagem</label>
+            <textarea id="input-message" name="message" rows="5" placeholder="Conte-nos sobre seu projeto..."
+              required></textarea>
+            <span class="form-error" id="error-message"></span>
+          </div>
+          <button type="submit" class="btn-primary btn-full" id="contact-submit-btn">Enviar mensagem</button>
+          <p class="form-success" id="form-success" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="src/Logo-Dextre-Tecnologia.png" alt="Dextre Tecnologia" class="footer-logo" />
+        <span class="footer-brand-name">Dextre Tecnologia</span>
+        <p class="footer-tagline">Inovação que impulsiona negócios.</p>
+      </div>
+      <nav class="footer-links" aria-label="Links do rodapé">
+        <a href="#inicio">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="footer-year"></span> Dextre Tecnologia. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+
+</body>
+
+</html>

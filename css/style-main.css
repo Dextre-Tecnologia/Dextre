@@ -1,0 +1,214 @@
+/* ============================================================
+   DEXTRE TECNOLOGIA — style.css
+   Dark/Gold theme | Pure CSS3 | No frameworks
+   ============================================================ */
+
+/* ---- CSS Custom Properties (Design Tokens) ---- */
+:root {
+  /* Colors */
+  --clr-bg:           #0a0a0b;
+  --clr-surface:      #111114;
+  --clr-surface-2:    #18181d;
+  --clr-border:       rgba(255,255,255,0.07);
+  --clr-border-gold:  rgba(212,175,55,0.35);
+
+  --clr-gold:         #d4af37;
+  --clr-gold-light:   #f0d060;
+  --clr-gold-dim:     #8a7225;
+  --clr-silver:       #c0c0c8;
+  --clr-silver-dim:   #6e6e7a;
+
+  --clr-text:         #e8e8f0;
+  --clr-text-muted:   #9090a8;
+  --clr-white:        #ffffff;
+
+  --gradient-gold:    linear-gradient(135deg, var(--clr-gold) 0%, var(--clr-gold-light) 50%, var(--clr-gold) 100%);
+  --gradient-hero:    linear-gradient(160deg, #0a0a0b 0%, #12120f 60%, #0a0a0b 100%);
+
+  /* Typography */
+  --font-body:        'Outfit', system-ui, sans-serif;
+  --fs-xs:            0.75rem;
+  --fs-sm:            0.875rem;
+  --fs-base:          1rem;
+  --fs-md:            1.125rem;
+  --fs-lg:            1.25rem;
+  --fs-xl:            1.5rem;
+  --fs-2xl:           2rem;
+  --fs-3xl:           2.75rem;
+  --fs-4xl:           3.75rem;
+  --fs-5xl:           5rem;
+
+  /* Spacing */
+  --sp-section:       7rem;
+  --nav-h:            72px;
+
+  /* Radius */
+  --radius-sm:        6px;
+  --radius-md:        12px;
+  --radius-lg:        20px;
+  --radius-full:      9999px;
+
+  /* Shadows */
+  --shadow-gold:      0 0 40px rgba(212,175,55,0.18);
+  --shadow-card:      0 4px 24px rgba(0,0,0,0.5);
+
+  /* Transitions */
+  --ease:             cubic-bezier(0.4, 0, 0.2, 1);
+  --duration:         0.3s;
+}
+
+/* ---- Reset & Base ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+  border: none;
+  background: none;
+}
+
+/* ---- Utility ---- */
+.gradient-text {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  background: var(--gradient-gold);
+  color: #0a0a0b;
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: var(--radius-full);
+  border: none;
+  transition: transform var(--duration) var(--ease),
+              box-shadow var(--duration) var(--ease),
+              filter var(--duration) var(--ease);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.15);
+  opacity: 0;
+  transition: opacity var(--duration) var(--ease);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(212,175,55,0.45);
+  filter: brightness(1.08);
+}
+
+.btn-primary:hover::after {
+  opacity: 1;
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.75rem;
+  color: var(--clr-silver);
+  font-weight: 500;
+  font-size: var(--fs-sm);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--clr-border);
+  transition: color var(--duration) var(--ease),
+              border-color var(--duration) var(--ease),
+              transform var(--duration) var(--ease);
+}
+
+.btn-ghost:hover {
+  color: var(--clr-gold);
+  border-color: var(--clr-gold-dim);
+  transform: translateY(-2px);
+}
+
+.btn-full {
+  width: 100%;
+  justify-content: center;
+}
+
+/* ---- Section Shared ---- */
+.section-container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: var(--sp-section) 1.5rem;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 4rem;
+}
+
+.section-eyebrow {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--clr-gold);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.section-title {
+  font-size: clamp(var(--fs-2xl), 4vw, var(--fs-3xl));
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.section-desc {
+  font-size: var(--fs-md);
+  color: var(--clr-text-muted);
+  line-height: 1.7;
+}
