@@ -63,6 +63,61 @@
     document.body.style.overflow = '';
   }
 
+  const dropdowns = document.querySelectorAll('.dropdown');
+
+  dropdowns.forEach(dropdown => {
+    const toggle = dropdown.querySelector('.dropdown-toggle');
+    const menu = dropdown.querySelector('.dropdown-menu');
+
+    if (!toggle || !menu) return;
+
+    toggle.addEventListener('click', e => {
+      e.preventDefault();
+      const shouldOpen = !dropdown.classList.contains('is-open');
+
+      dropdowns.forEach(other => {
+        other.classList.remove('is-open');
+        const otherToggle = other.querySelector('.dropdown-toggle');
+        if (otherToggle) otherToggle.setAttribute('aria-expanded', 'false');
+      });
+
+      dropdown.classList.toggle('is-open', shouldOpen);
+      toggle.setAttribute('aria-expanded', String(shouldOpen));
+    });
+
+    dropdown.addEventListener('mouseenter', () => {
+      if (window.innerWidth > 860) {
+        dropdown.classList.add('is-open');
+        toggle.setAttribute('aria-expanded', 'true');
+      }
+    });
+
+    dropdown.addEventListener('mouseleave', () => {
+      if (window.innerWidth > 860) {
+        dropdown.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    menu.querySelectorAll('a').forEach(item => {
+      item.addEventListener('click', () => {
+        dropdown.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        if (navLinksMenu.classList.contains('is-open')) closeMenu();
+      });
+    });
+  });
+
+  document.addEventListener('click', e => {
+    dropdowns.forEach(dropdown => {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('is-open');
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
   hamburgerBtn.addEventListener('click', () => {
     const isOpen = hamburgerBtn.classList.contains('is-open');
     isOpen ? closeMenu() : openMenu();
