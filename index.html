@@ -29,27 +29,37 @@
   <header class="navbar" id="navbar">
     <div class="nav-container">
 
-      <script src="./js/script-navbar.js"></script>
-
-      <a href="#inicio" class=" nav-logo" id="nav-logo-link">
-        <img src="./src/Logo-Dextre-Tecnologia.png" width="100px" />
+      <a href="#inicio" class="nav-logo" id="nav-logo-link">
+        <img src="./src/Logo-Dextre-Tecnologia.png" width="100px" class="nav-logo-img" />
         <span class="logo-text">Dextre<span class="logo-accent">.</span></span>
       </a>
 
       <nav class="nav-links" id="nav-links" aria-label="Navegação principal">
         <ul>
           <li><a href="#sobre" class="nav-link" id="link-sobre">Sobre</a></li>
-          <li><a href="#servicos" class="nav-link" id="link-servicos">Serviços</a></li>
-          <!-- ITEM DROPDOWN MODIFICADO -->
+          <!-- SERVIÇOS-->
           <li class="dropdown">
             <a href="#" class="nav-link dropdown-toggle" id="link-produtos" aria-haspopup="true" aria-expanded="false">Produtos</a>
             <ul class="dropdown-menu">
-              <li><a href="#agendex">AgenDex</a></li>
-              <li><a href="#maildex">MailDex</a></li>
+              <li><a href="#ia">I.A</a></li>
+              <li><a href="#saas">SaaS</a></li>
+            </ul>
+          </li>
+
+          <!-- PRODUTOS -->
+          <li class="dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="link-produtos" aria-haspopup="true" aria-expanded="false">Produtos</a>
+            <ul class="dropdown-menu">
+              <li><a href="#dextreos">DextreOS</a></li>
+              <li><a href="#dexi-browser">Dexi Browser</a></li>
+              <li><a href="#servicos-ia">I.A</a></li>
+              <li><a href="#saas">SaaS</a></li>
+              <li><a href="#saas">Notebooks</a></li>
+              <li><a href="#saas">Smartphones</a></li>
+              <li><a href="#saas">DexBots</a></li>
             </ul>
           </li>
         </ul>
-        <a href="#contato" class="btn-cta nav-cta" id="nav-cta-btn">Fale Conosco</a>
       </nav>
 
       <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu" aria-expanded="false"
@@ -103,7 +113,7 @@
       </a>
     </section>
 
-    <!-- ===== SERVIÇOS ===== -->
+    <!-- ===== SERVIÇOS ===== 
     <section class="services" id="servicos">
       <div class="section-container">
         <div class="section-header">
@@ -199,10 +209,13 @@
         </div>
       </div>
     </section>
+    -->
 
     <!-- ===== SOBRE ===== -->
     <section class="about" id="sobre">
       <div class="section-container about-inner">
+       
+        <!-- DADOS ESTATÍSTICOS 
         <div class="about-visual" aria-hidden="true">
           <div class="about-stats">
             <div class="stat-card" id="stat-projects">
@@ -223,6 +236,7 @@
             </div>
           </div>
         </div>
+       -->
 
         <div class="about-content">
           <p class="section-eyebrow">Quem somos</p>
@@ -242,12 +256,12 @@
             <li>✦ Suporte pós-entrega dedicado</li>
             <li>✦ Prazos e orçamentos respeitados</li>
           </ul>
-          <a href="#contato" class="btn-primary" id="about-cta-btn">Entre em contato</a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dextretecnologia.oficial@gmail.com&su=Escreva%20aqui%20seu%20Assunto" class="btn-primary" id="about-cta-btn" target="_blank" rel="noopener noreferrer">Entre em contato</a>
         </div>
       </div>
     </section>
 
-    <!-- ===== CONTATO ===== -->
+    <!-- ===== CONTATO =====
     <section class="contact" id="contato">
       <div class="section-container">
         <div class="section-header">
@@ -286,6 +300,9 @@
         </form>
       </div>
     </section>
+    -->
+
+
   </main>
 
 
@@ -301,13 +318,16 @@
         <a href="#inicio">Início</a>
         <a href="#servicos">Serviços</a>
         <a href="#sobre">Sobre</a>
-        <a href="#contato">Contato</a>
       </nav>
     </div>
     <div class="footer-bottom">
       <p>© <span id="footer-year"></span> Dextre Tecnologia. Todos os direitos reservados.</p>
     </div>
   </footer>
+
+  <a href="https://github.com/Dextre-Tecnologia/Dextre" class="floating-github" target="_blank" rel="noopener noreferrer" aria-label="Acessar GitHub">
+    <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png" class="w-10" alt="GitHub" />
+  </a>
 
   <script src="./script.js"></script>
 
