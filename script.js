@@ -223,12 +223,14 @@
 
   // Real-time validation on blur
   Object.entries(fields).forEach(([name, { el, err }]) => {
+    if (!el || !err) return; // Skip if element doesn't exist
     el.addEventListener('blur', () => validateField(name, el, err));
     el.addEventListener('input', () => {
       if (el.classList.contains('is-invalid')) validateField(name, el, err);
     });
   });
 
+  if (form) {
   form.addEventListener('submit', e => {
     e.preventDefault();
 
@@ -257,6 +259,7 @@
       setTimeout(() => { successMsg.textContent = ''; }, 6000);
     }, 1400);
   });
+  } // End of if (form)
 
   /* ----------------------------------------------------------
      6. FOOTER YEAR
