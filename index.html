@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="./css/style-media-query.css" />
   <link rel="stylesheet" href="./css/style-scroll-review.css" />
   <link rel="stylesheet" href="./css/style-footer.css" />
+  <link rel="stylesheet" href="./css/style-4dex.css" />
 </head>
 
 <body>
@@ -37,26 +38,23 @@
       <nav class="nav-links" id="nav-links" aria-label="Navegação principal">
         <ul>
           <li><a href="#sobre" class="nav-link" id="link-sobre">Sobre</a></li>
-          <!-- SERVIÇOS-->
+          <!-- 4DEX -->
           <li class="dropdown">
-            <a href="#" class="nav-link dropdown-toggle" id="link-servicos" aria-haspopup="true" aria-expanded="false">Serviços</a>
-            <ul class="dropdown-menu">
-              <li><a href="#ia">I.A</a></li>
-              <li><a href="#saas">SaaS</a></li>
-            </ul>
+            <a href="#4dex" class="nav-link dropdown-toggle" id="link-servicos" aria-haspopup="true" aria-expanded="false">4Dex</a>
           </li>
 
           <!-- PRODUTOS -->
           <li class="dropdown">
             <a href="#" class="nav-link dropdown-toggle" id="link-produtos" aria-haspopup="true" aria-expanded="false">Produtos</a>
             <ul class="dropdown-menu">
-              <li><a href="#dextreos">DextreOS</a></li>
-              <li><a href="https://dextre-tecnologia.github.io/Dexi/" target="_blank">Dexi</a></li>
-              <li><a href="#servicos-ia">I.A</a></li>
-              <li><a href="#saas">SaaS</a></li>
+              <li><a href="https://dextre-tecnologia.github.io/Dexi/" target="_blank">Dexi Browser</a></li>
+              <li><a href="#">DextreOS</a></li>
+              <li><a href="#">DexBots</a></li>
+              <!-- Em breve
               <li><a href="#saas">Notebooks</a></li>
               <li><a href="#saas">Smartphones</a></li>
-              <li><a href="#saas">DexBots</a></li>
+              -->
+              
             </ul>
           </li>
         </ul>
@@ -93,7 +91,7 @@
           focadas em web, que impulsionam negócios.
         </p>
         <div class="hero-actions">
-          <a href="#servicos" class="btn-primary" id="hero-btn-primary">Conheça nossos serviços</a>
+          <a href="#4dex" class="btn-primary" id="hero-btn-primary">Conheça nossos serviços</a>
           <a href="#sobre" class="btn-ghost" id="hero-btn-ghost">Saiba mais</a>
         </div>
       </div>
@@ -113,7 +111,55 @@
       </a>
     </section>
 
-    <!-- ===== SERVIÇOS ===== 
+    <!--================================= 4DEX ======================================================-->
+
+    <section class="four-dex" id="4dex" aria-labelledby="four-dex-title">
+      <div class="four-dex-inner">
+        <div class="four-dex-content">
+          <p class="section-eyebrow">Ecossistema Dextre</p>
+          <h2 class="section-title" id="four-dex-title">Conheça a <span class="gradient-text">4Dex</span></h2>
+          <p class="four-dex-description">
+            Uma plataforma que conecta serviços e soluções de tecnologia em um só lugar.
+            A 4Dex reúne ferramentas digitais para simplificar processos, aproximar pessoas
+            e impulsionar novas possibilidades para o seu negócio.
+          </p>
+        </div>
+
+        <div class="four-dex-visual">
+          <ul class="four-dex-orbit" aria-label="Módulos da plataforma 4Dex">
+            <li class="four-dex-planet" style="--orbit-angle: 0deg;">
+              <a class="four-dex-planet-link" href="#4dex" aria-label="Abrir módulo DAT">
+                <img src="./src/4dex/Dat-Logo.png" alt="" />
+                <span>DAT</span>
+              </a>
+            </li>
+            <li class="four-dex-planet" style="--orbit-angle: 90deg;">
+              <a class="four-dex-planet-link" href="#4dex" aria-label="Abrir módulo DEF">
+                <img src="./src/4dex/Def.png" alt="" />
+                <span>DEF</span>
+              </a>
+            </li>
+            <li class="four-dex-planet" style="--orbit-angle: 180deg;">
+              <a class="four-dex-planet-link" href="#4dex" aria-label="Abrir módulo DES">
+                <img src="./src/4dex/Des-logo.png" alt="" />
+                <span>DES</span>
+              </a>
+            </li>
+            <li class="four-dex-planet four-dex-planet--dev" style="--orbit-angle: 270deg;">
+              <a class="four-dex-planet-link" href="#4dex" aria-label="Abrir módulo DEV">
+                <img src="./src/4dex/Dev-logo.png" alt="" />
+                <span>DEV</span>
+              </a>
+            </li>
+          </ul>
+          <a class="four-dex-core" href="#4dex" aria-label="Abrir plataforma 4Dex">
+            <img src="./src/4dex/4Dex-Logo-removebg.png" alt="" />
+            <span>4Dex</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section class="services" id="servicos">
       <div class="section-container">
         <div class="section-header">

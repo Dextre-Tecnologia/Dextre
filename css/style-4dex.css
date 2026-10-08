@@ -1,0 +1,215 @@
+.four-dex {
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--clr-border);
+  border-bottom: 1px solid var(--clr-border);
+  background:
+    radial-gradient(ellipse at 76% 50%, rgba(212, 175, 55, 0.07), transparent 35%),
+    linear-gradient(110deg, #0d0d0e, #11110f 52%, #0d0d0e);
+}
+
+.four-dex-inner {
+  max-width: 1160px;
+  min-height: 610px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+}
+
+.four-dex-content {
+  max-width: 490px;
+}
+
+.four-dex-content .section-title {
+  margin-bottom: 1.25rem;
+}
+
+.four-dex-description {
+  max-width: 460px;
+  color: var(--clr-text-muted);
+  font-size: var(--fs-md);
+  line-height: 1.8;
+}
+
+.four-dex-visual {
+  position: relative;
+  width: min(100%, 460px);
+  aspect-ratio: 1;
+  margin-inline: auto;
+  isolation: isolate;
+  container-type: inline-size;
+}
+
+.four-dex-visual::before,
+.four-dex-visual::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(212, 175, 55, 0.16);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.four-dex-visual::before {
+  inset: 6%;
+}
+
+.four-dex-visual::after {
+  inset: 19%;
+  border-color: rgba(192, 192, 200, 0.1);
+}
+
+.four-dex-orbit {
+  position: absolute;
+  inset: 7%;
+  z-index: 1;
+  border: 1px dashed rgba(212, 175, 55, 0.34);
+  border-radius: 50%;
+  animation: four-dex-spin 48s linear infinite;
+}
+
+.four-dex-planet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: clamp(64px, 17%, 78px);
+  transform: translate(-50%, -50%) rotate(var(--orbit-angle)) translateX(37cqi);
+}
+
+.four-dex-planet-link {
+  display: grid;
+  width: 100%;
+  justify-items: center;
+  gap: 0.15rem;
+  color: var(--clr-silver);
+  font-size: 0.62rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+}
+
+.four-dex-planet--dev .four-dex-planet-link {
+  width: 145%;
+}
+
+.four-dex-planet-link:hover {
+  color: var(--clr-gold-light);
+}
+
+.four-dex-planet-link:focus-visible {
+  outline: 2px solid var(--clr-gold-light);
+  outline-offset: 5px;
+  border-radius: 50%;
+}
+
+.four-dex-planet-link img,
+.four-dex-planet-link span {
+  animation: four-dex-counter-spin 48s linear infinite;
+}
+
+.four-dex-planet-link img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.6));
+}
+
+.four-dex-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  width: 37%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+  color: var(--clr-gold-light);
+  border: 1px solid rgba(212, 175, 55, 0.6);
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 0 0 0 9px rgba(212, 175, 55, 0.06), 0 0 48px rgba(212, 175, 55, 0.2);
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+}
+
+.four-dex-core:hover {
+  transform: translate(-50%, -50%) scale(1.04);
+  box-shadow: 0 0 0 12px rgba(212, 175, 55, 0.08), 0 0 56px rgba(212, 175, 55, 0.3);
+}
+
+.four-dex-core:focus-visible {
+  outline: 2px solid var(--clr-gold-light);
+  outline-offset: 7px;
+}
+
+.four-dex-core img {
+  width: 69%;
+  height: 69%;
+  object-fit: contain;
+}
+
+.four-dex-core span {
+  margin-top: -0.3rem;
+  color: inherit;
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+@keyframes four-dex-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes four-dex-counter-spin {
+  from { transform: rotate(calc(0deg - var(--orbit-angle))); }
+  to { transform: rotate(calc(-360deg - var(--orbit-angle))); }
+}
+
+@media (max-width: 900px) {
+  .four-dex-inner {
+    min-height: 0;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-block: 4.5rem;
+  }
+
+  .four-dex-content {
+    max-width: 620px;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .four-dex-visual {
+    width: min(100%, 420px);
+  }
+}
+
+@media (max-width: 480px) {
+  .four-dex-inner {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .four-dex-visual {
+    width: min(100%, 350px);
+  }
+
+  .four-dex-planet-link {
+    font-size: 0.55rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .four-dex-orbit,
+  .four-dex-planet-link img,
+  .four-dex-planet-link span {
+    animation: none;
+  }
+}
