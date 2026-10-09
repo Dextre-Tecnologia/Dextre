@@ -52,7 +52,7 @@
 
 .card--highlight {
   border-color: var(--clr-border-gold);
-  background: linear-gradient(145deg, #181608 0%, var(--clr-surface-2) 100%);
+  background: var(--gradient-card-highlight);
 }
 
 .card--highlight::before {

@@ -24,6 +24,10 @@
 
   --gradient-gold:    linear-gradient(135deg, var(--clr-gold) 0%, var(--clr-gold-light) 50%, var(--clr-gold) 100%);
   --gradient-hero:    linear-gradient(160deg, #0a0a0b 0%, #12120f 60%, #0a0a0b 100%);
+  --gradient-four-dex: linear-gradient(110deg, #0d0d0e, #11110f 52%, #0d0d0e);
+  --gradient-card-highlight: linear-gradient(145deg, #181608 0%, var(--clr-surface-2) 100%);
+
+  color-scheme: dark;
 
   /* Typography */
   --font-body:        'Outfit', system-ui, sans-serif;
@@ -69,6 +73,31 @@ html {
   font-size: 16px;
 }
 
+html[data-theme="light"] {
+  --clr-bg:           #f4f7fb;
+  --clr-surface:      #ffffff;
+  --clr-surface-2:    #eef3f9;
+  --clr-border:       rgba(15, 23, 42, 0.1);
+  --clr-border-gold:  rgba(184, 137, 10, 0.3);
+
+  --clr-gold:         #bf8c00;
+  --clr-gold-light:   #f3c653;
+  --clr-gold-dim:     #9d7300;
+  --clr-silver:       #546071;
+  --clr-silver-dim:   #7b8797;
+
+  --clr-text:         #101828;
+  --clr-text-muted:   #52607a;
+  --clr-white:        #0f172a;
+
+  --gradient-gold:    linear-gradient(135deg, var(--clr-gold) 0%, var(--clr-gold-light) 50%, var(--clr-gold) 100%);
+  --gradient-hero:    linear-gradient(160deg, #f9fafb 0%, #eef3ff 60%, #f5f7fb 100%);
+  --gradient-four-dex: linear-gradient(110deg, #f7f9fc 0%, #eef2f8 52%, #f4f7fb 100%);
+  --gradient-card-highlight: linear-gradient(145deg, #fff6d9 0%, var(--clr-surface-2) 100%);
+
+  color-scheme: light;
+}
+
 body {
   font-family: var(--font-body);
   background-color: var(--clr-bg);
@@ -76,6 +105,7 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  transition: background-color var(--duration) var(--ease), color var(--duration) var(--ease);
 }
 
 .floating-github {

@@ -2,6 +2,56 @@
 (() => {
   'use strict';
 
+  /* ----------------------------------------------------------
+     0. THEME — light/dark mode with persistence
+     ---------------------------------------------------------- */
+  const themeToggle = document.getElementById('theme-toggle');
+  const fourDexLogo = document.getElementById('four-dex-core-logo');
+
+  function getPreferredTheme() {
+    const savedTheme = localStorage.getItem('dextre-theme');
+    if (savedTheme === 'light' || savedTheme === 'dark') {
+      return savedTheme;
+    }
+
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+
+    if (fourDexLogo) {
+      const darkLogo = './src/4dex/4Dex-Logo-removebg.png';
+      const lightLogo = './src/4dex/4Dex-Logo-Black-removebg.png';
+      fourDexLogo.src = theme === 'light' ? lightLogo : darkLogo;
+      fourDexLogo.alt = theme === 'light' ? 'Logo 4Dex em preto' : 'Logo 4Dex em destaque';
+    }
+
+    if (!themeToggle) return;
+
+    const isDark = theme === 'dark';
+    const icon = themeToggle.querySelector('.theme-toggle__icon');
+
+    themeToggle.setAttribute('aria-pressed', String(!isDark));
+    themeToggle.setAttribute('aria-label', isDark ? 'Ativar modo claro' : 'Ativar modo escuro');
+
+    if (icon) icon.textContent = isDark ? '🌙' : '☀️';
+  }
+
+  const initialTheme = getPreferredTheme();
+  applyTheme(initialTheme);
+  localStorage.setItem('dextre-theme', initialTheme);
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+      applyTheme(nextTheme);
+      localStorage.setItem('dextre-theme', nextTheme);
+    });
+  }
+
    /* ----------------------------------------------------------
      1. NAVBAR — scroll-based background + active link highlight
      ---------------------------------------------------------- */

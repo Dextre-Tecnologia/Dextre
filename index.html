@@ -60,6 +60,10 @@
         </ul>
       </nav>
 
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Ativar modo claro" aria-pressed="false">
+        <span class="theme-toggle__icon" aria-hidden="true">☀️</span>
+      </button>
+
       <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu" aria-expanded="false"
         aria-controls="nav-links">
         <span class="bar"></span>
@@ -135,26 +139,25 @@
             </li>
             <li class="four-dex-planet" style="--orbit-angle: 90deg;">
               <a class="four-dex-planet-link" href="#4dex" aria-label="Abrir módulo DEF">
-                <img src="./src/4dex/Def.png" alt="" />
+                <img src="./src/4dex/Def-Logo.png" alt="" />
                 <span>DEF</span>
               </a>
             </li>
             <li class="four-dex-planet" style="--orbit-angle: 180deg;">
               <a class="four-dex-planet-link" href="#4dex" aria-label="Abrir módulo DES">
-                <img src="./src/4dex/Des-logo.png" alt="" />
+                <img src="./src/4dex/Des-Logo.png" alt="" />
                 <span>DES</span>
               </a>
             </li>
             <li class="four-dex-planet four-dex-planet--dev" style="--orbit-angle: 270deg;">
               <a class="four-dex-planet-link" href="#4dex" aria-label="Abrir módulo DEV">
-                <img src="./src/4dex/Dev-logo.png" alt="" />
+                <img src="./src/4dex/Dev-Logo.png" alt="" />
                 <span>DEV</span>
               </a>
             </li>
           </ul>
           <a class="four-dex-core" href="#4dex" aria-label="Abrir plataforma 4Dex">
-            <img src="./src/4dex/4Dex-Logo-removebg.png" alt="" />
-            <span>4Dex</span>
+            <img id="four-dex-core-logo" src="./src/4dex/4Dex-Logo-removebg.png" alt="Logo 4Dex" />
           </a>
         </div>
       </div>
@@ -255,7 +258,7 @@
         </div>
       </div>
     </section>
-    -->
+    
 
     <!-- ===== SOBRE ===== -->
     <section class="about" id="sobre">

@@ -5,7 +5,7 @@
   border-bottom: 1px solid var(--clr-border);
   background:
     radial-gradient(ellipse at 76% 50%, rgba(212, 175, 55, 0.07), transparent 35%),
-    linear-gradient(110deg, #0d0d0e, #11110f 52%, #0d0d0e);
+    var(--gradient-four-dex);
 }
 
 .four-dex-inner {
@@ -91,8 +91,12 @@
   text-decoration: none;
 }
 
+.four-dex-planet--dev {
+  width: clamp(52px, 14%, 66px);
+}
+
 .four-dex-planet--dev .four-dex-planet-link {
-  width: 145%;
+  width: 120%;
 }
 
 .four-dex-planet-link:hover {
