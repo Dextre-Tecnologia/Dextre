@@ -97,6 +97,13 @@
 
 .four-dex-planet--dev .four-dex-planet-link {
   width: 120%;
+  color: var(--clr-gold-light);
+}
+
+.four-dex-planet--dev .four-dex-planet-link img {
+  filter: hue-rotate(230deg) saturate(1.3)
+    drop-shadow(0 5px 12px rgba(0, 0, 0, 0.6))
+    drop-shadow(0 0 8px rgba(240, 208, 96, 0.4));
 }
 
 .four-dex-planet-link:hover {
