@@ -21,8 +21,8 @@
     document.documentElement.setAttribute('data-theme', theme);
 
     if (fourDexLogo) {
-      const darkLogo = './src/4dex/4Dex-Logo-removebg.png';
-      const lightLogo = './src/4dex/4Dex-Logo-Black-removebg.png';
+      const darkLogo = './src/4dex/4Dex-White.png';
+      const lightLogo = './src/4dex/4Dex-Black.png';
       fourDexLogo.src = theme === 'light' ? lightLogo : darkLogo;
       fourDexLogo.alt = theme === 'light' ? 'Logo 4Dex em preto' : 'Logo 4Dex em destaque';
     }

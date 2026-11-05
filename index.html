@@ -131,20 +131,20 @@
 
         <div class="four-dex-visual">
           <ul class="four-dex-orbit" aria-label="Módulos da plataforma 4Dex">
-            <li class="four-dex-planet" style="--orbit-angle: 0deg;">
+            <li class="four-dex-planet four-dex-planet--dat" style="--orbit-angle: 0deg;">
               <a class="four-dex-planet-link" href="https://marcosdanton.github.io/Dat" target="_blank" aria-label="Abrir módulo DAT">
                 <img src="./src/4dex/Dat-Logo.png" alt="Dat" />
                 <span>DAT</span>
               </a>
             </li>
-            <li class="four-dex-planet" style="--orbit-angle: 90deg;">
+            <li class="four-dex-planet four-dex-planet--def" style="--orbit-angle: 90deg;">
               <a class="four-dex-planet-link" href="https://marcosdanton.github.io/Def/" target="_blank" aria-label="Abrir módulo DEF">
                 <img src="./src/4dex/Def-Logo.png" alt="Def" />
                 <span>DEF</span>
               </a>
             </li>
             
-            <li class="four-dex-planet" style="--orbit-angle: 180deg;">
+            <li class="four-dex-planet four-dex-planet--des" style="--orbit-angle: 180deg;">
               <a class="four-dex-planet-link" href="https://marcosdanton.github.io/Des/" target="_blank" aria-label="Abrir módulo DES">
                 <img src="./src/4dex/Des-Logo.png" alt="Des" />
                 <span>DES</span>
@@ -160,7 +160,7 @@
             
           </ul>
           <a class="four-dex-core" href="https://dextre-tecnologia.github.io/4Dex/" target="_blank" aria-label="Abrir plataforma 4Dex">
-            <img id="four-dex-core-logo" src="https://dextre-tecnologia.github.io/4Dex/src/4Dex-White-removebg-preview.png" alt="Logo 4Dex" />
+            <img id="four-dex-core-logo" src="./src/4dex/4Dex-White.png" alt="Logo 4Dex" />
           </a>
         </div>
       </div>
@@ -188,11 +188,11 @@
             <h3 class="card-title">Desenvolvimentos</h3>
             <p class="card-desc">Sites, sistemas e aplicações web modernas, rápidas e escaláveis, construídas com as
               melhores tecnologias do mercado.</p>
-            <img src="./src/4dex/Dev-Logo.png" class="card-tag" style="width: 16px;">
+            <img src="./src/4dex/Dev-Logo.png" class="card-service-logo" alt="Logo do módulo DEV" loading="lazy" />
           </article>
 
           <!--  Dados -->
-          <article class="card card--highlight" id="card-cloud">
+          <article class="card card--highlight" id="card-data">
             <div class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
@@ -201,48 +201,49 @@
             <h3 class="card-title">Dados</h3>
             <p class="card-desc">Automatize processos e ganhe inteligência operacional com soluções de IA personalizadas
               para o seu segmento.</p>
-            <img src="./src/4dex/Dat-Logo.png" class="card-tag" style="width: 16px;>
+            <img src="./src/4dex/Dat-Logo.png" class="card-service-logo" alt="Logo do módulo DAT" loading="lazy" />
           </article>
 
            <!--  Defesas -->
-          <article class="card card--highlight" id="card-cloud">
+          <article class="card card--highlight" id="card-defense">
             <div class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"></path>
+                <path d="m9 12 2 2 4-4"></path>
               </svg>
             </div>
             <h3 class="card-title">Defesas</h3>
             <p class="card-desc">Automatize processos de defesas dos sistemas da sua empresa ou do seu negócio de maneira rápida e eficiente com I.A.</p>
-            <img src="./src/4dex/Def-Logo.png" class="card-tag" style="width: 16px;>
+            <img src="./src/4dex/Def-Logo.png" class="card-service-logo" alt="Logo do módulo DEF" loading="lazy" />
           </article>
 
           <!-- Designs -->
           <article class="card" id="card-ui">
             <div class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="2" y1="12" x2="22" y2="12"></line>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
-                </path>
+                <path d="m12 19 7-7 3 3-7 7-3-3z"></path>
+                <path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18"></path>
+                <path d="m2 2 7.586 7.586"></path>
+                <circle cx="11" cy="11" r="2"></circle>
               </svg>
             </div>
             <h3 class="card-title">Designs</h3>
             <p class="card-desc">Interfaces e modelagens 2D/ 3D bonitas, intuitivas, centradas no usuário que convertem visitantes em
               clientes fiéis.</p>
-            <img src="./src/4dex/Des-Logo.png" class="card-tag" style="width: 16px;>
+            <img src="./src/4dex/Des-Logo.png" class="card-service-logo" alt="Logo do módulo DES" loading="lazy" />
           </article>
 
-          <!-- Consultoria  -->
+          <!-- Consultorias  -->
           <article class="card" id="card-consult">
             <div class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#f2df00"></path>
+                <circle cx="9" cy="7" r="4" stroke="#f2df00"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="#3155e8"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="#3155e8"></path>
               </svg>
             </div>
-            <h3 class="card-title">Consultoria Tech</h3>
+            <h3 class="card-title">Consultorias</h3>
             <p class="card-desc">Assessoria estratégica para escolhas tecnológicas que maximizam o ROI e impulsionam o
               crescimento sustentável.</p>
             <span class="card-tag">Estratégias</span>
